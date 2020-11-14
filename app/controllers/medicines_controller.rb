@@ -4,7 +4,7 @@ class MedicinesController < ApplicationController
     end
 
     def show
-        @medicine = Medicine.find_by(id: params[:id])
+        @medicine = Medicine.find_by!(id: params[:id])
     end
 
     def create
@@ -13,12 +13,12 @@ class MedicinesController < ApplicationController
     end
 
     def update 
-        @medicine = Medicine.find_by(id: params[:id])
+        @medicine = Medicine.find_by!(id: params[:id])
         @medicine.update(Name: params[:medicineName],Type: params[:medicineType])
     end
 
     def destroy
-        @medicine = Medicine.find_by(id: params[:id])
+        @medicine = Medicine.find_by!(id: params[:id])
         @medicine.destroy
     end
     
