@@ -9,12 +9,12 @@ class MedicinesController < ApplicationController
 
     def create
         #binding.pry
-        @medicine = Medicine.create(Name: params[:medicineName],Type: params[:medicineType])
+        @medicine = Medicine.create(name: params[:medicineName],type: params[:medicineType])
     end
 
     def update 
         @medicine = Medicine.find_by!(id: params[:id])
-        @medicine.update(Name: params[:medicineName],Type: params[:medicineType])
+        @medicine.update(name: params[:medicineName],type: params[:medicineType])
     end
 
     def destroy

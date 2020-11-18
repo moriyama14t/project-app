@@ -1,11 +1,12 @@
 class ApplicationController < ActionController::API
     #if Rails.env.production?
-        rescue_from StandardError, with: :rescue_500
+        rescue_from StandardError, with: :rescue_500　
         rescue_from ActionController::RoutingError, with: :rescue_404
         rescue_from ActiveRecord::RecordNotFound, with: :rescue_404
         rescue_from ActionController::UnknownFormat, with: :rescue_404
         rescue_from ActionView::MissingTemplate, with: :rescue_404
     #end
+    
     def rescue_404(error = nil)
         Rails.logger.warn(
         "message: 404 NotFound #{request.url},
