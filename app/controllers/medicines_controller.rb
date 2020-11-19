@@ -8,7 +8,6 @@ class MedicinesController < ApplicationController
     end
 
     def create
-        #binding.pry
         @medicine = Medicine.create(name: params[:medicineName],type: params[:medicineType])
     end
 

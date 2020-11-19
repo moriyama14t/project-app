@@ -2,7 +2,6 @@ require 'rails_helper'
 describe MedicinesController, type: :request do
 
     describe 'Index test' do
-        #let(:medicines) { FactoryBot.create_list(:medicine, 5) }
         it 'success' do
         get medicines_path
         expect(response).to have_http_status(:success)
