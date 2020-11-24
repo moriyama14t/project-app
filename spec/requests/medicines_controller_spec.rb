@@ -24,3 +24,6 @@ describe MedicinesController, type: :request do
 
     end
 end
+
+#404が帰ってくるか
+#APIエンドポイント　

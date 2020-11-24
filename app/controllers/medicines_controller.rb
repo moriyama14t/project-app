@@ -19,6 +19,6 @@ class MedicinesController < ApplicationController
     def destroy
         @medicine = Medicine.find_by!(id: params[:id])
         @medicine.destroy
+        #ifをつける　エラ-ハンドリング　テストが必要！！
     end
-    
 end
